@@ -1,0 +1,33 @@
+.card-proyect{
+    background: linear-gradient(135deg, #ffffff19, #ffffff05);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    transition: all 0.5s ease;
+}
+.card-proyect-icon{
+    background: rgba(255, 255,255,0.1);
+    padding: 15px;
+    border-radius: 15px;
+    color:rgba(255, 255,255,0.3) ;
+    box-shadow: 0 4px 4px rgb(0, 0, 0, 0.4);
+    transition: all 0.5s ease;
+}
+.icon-efect{
+    background: linear-gradient(180deg, #FFFEFE, #B9B2FF);
+    padding: 15px;
+    border-radius: 15px;
+    color:#171719 ;
+    box-shadow: 0 4px 4px rgb(0, 0, 0, 0.4);
+}
+
+
+.card-proyect-efect{
+    cursor: pointer;
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #2E1CFB, #5C43FF, #6F2CFF); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+}

@@ -1,0 +1,14 @@
+.bs-header-nav a{
+    @apply text-[18px] cursor-pointer hover:text-[#725CFE] transition-all duration-500;
+}
+
+
+.bs-header-btn button{
+    transition: all 250ms ease-in-out;
+}
+.bs-header-btn button:hover{
+    transform: translate(5px, -5px);
+    box-shadow: 0px 8px 20px 2px#372688;
+    
+}
+
