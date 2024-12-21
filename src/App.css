@@ -6,8 +6,11 @@
 }
 
 .bg-container {
-  top: 127px;
+  top: 10px;
   position: absolute;
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
   background-image: url('./assets/fondoHeader.svg');
 }
 

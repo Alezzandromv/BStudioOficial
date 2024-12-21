@@ -1,6 +1,6 @@
 .slide-pj{
     background: linear-gradient(135deg, #ffffff19, #ffffff05);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); 
     border: 1px solid rgba(255, 255, 255, 0.1); 
@@ -9,6 +9,6 @@
 }
 
 .slide-pj:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
     cursor: pointer;
 }

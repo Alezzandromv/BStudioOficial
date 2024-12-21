@@ -1,13 +1,37 @@
-import React from "react";
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 export function ContactForm () {
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_ewx9ihd', 'template_m3ierqk', form.current, {
+        publicKey: 'ktCsYrXAOErrtdRb0',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          form.current.reset();
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
   return (
-      <div className="w-full px-24 bg-transparent">
-        <form className="space-y-6 text-start text-[20px] text-white/80">
+      <div className="w-full px-2 sm:px-24 bg-transparent">
+        <form className="space-y-6 text-center text-[18px] text-white/80
+                         sm:text-start sm:text-[20px]"
+                         ref={form} onSubmit={sendEmail}>
           <div>
             <label
               htmlFor="name"
-              className="block text-[20px] font-medium text-white"
+              className="block text-[18px] sm:text-[20px] font-medium text-white"
             >
               Nombre completo *
             </label>
@@ -23,7 +47,7 @@ export function ContactForm () {
             <div>
               <label
                 htmlFor="phone"
-                className="block text-[20px] font-medium text-white"
+                className="block text-[18px] sm:text-[20px] font-medium text-white"
               >
                 Teléfono *
               </label>
@@ -38,7 +62,7 @@ export function ContactForm () {
             <div>
               <label
                 htmlFor="email"
-                className="block text-[20px] font-medium text-white"
+                className="block text-[18px] sm:text-[20px] font-medium text-white"
               >
                 Email *
               </label>
@@ -54,7 +78,7 @@ export function ContactForm () {
           <div>
             <label
               htmlFor="message"
-              className="block text-[20px] font-medium text-white"
+              className="block text-[18px] sm:text-[20px] font-medium text-white"
             >
               ¿En qué podemos ayudarte? *
             </label>
@@ -67,8 +91,7 @@ export function ContactForm () {
             ></textarea>
           </div>
           <div>
-          <button className='btn-section bg-[#5C43FF] py-3 px-20 mt-5 rounded-[15px] text-[22px] font-bold max-w-[300px]'>Enviar</button>
-       
+          <input type='submit' className='btn-section bg-[#5C43FF] py-3 px-16 sm:px-20 mt-5 rounded-[15px] text-[18px] sm:text-[20px] font-bold max-w-[300px]' value="Enviar"/>
           </div>
         </form>
         
